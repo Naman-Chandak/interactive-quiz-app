@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon Trivia Quiz</title>
+  <meta name="description" content="A 10-question Pokémon trivia quiz built with HTML, CSS and JavaScript.">
+  <link rel="preload" href="assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Pok&eacute;mon Trivia</h1>
+
+    <!-- Start screen -->
+    <section class="panel" id="start-screen">
+      <p class="text">10 questions. Pick one answer for each and see your trainer rank at the end.</p>
+      <p class="hint">Tip: press 1 to 4 to answer and Enter for the next question.</p>
+      <button class="btn btn--primary" id="start-btn" type="button">Start quiz</button>
+    </section>
+
+    <!-- Question screen -->
+    <section class="panel" id="quiz-screen" hidden>
+      <div class="meta">
+        <span id="progress-text">Question 1 of 10</span>
+        <span id="score-text">Score: 0</span>
+      </div>
+      <div class="bar" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="bar">
+        <div class="bar__fill" id="bar-fill"></div>
+      </div>
+
+      <h2 class="question" id="question" tabindex="-1"></h2>
+      <ul class="options" id="options"></ul>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      <button class="btn btn--primary" id="next-btn" type="button" hidden>Next question</button>
+    </section>
+
+    <!-- Result screen -->
+    <section class="panel" id="result-screen" hidden>
+      <p class="result__label">Your score</p>
+      <p class="result__score" id="final-score">0 / 10</p>
+      <p class="result__rank" id="final-rank"></p>
+      <p class="text" id="final-message"></p>
+      <button class="btn btn--primary" id="restart-btn" type="button">Play again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
