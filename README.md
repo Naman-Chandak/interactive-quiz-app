@@ -2,7 +2,7 @@
 
 A 10-question Pokémon quiz built with plain HTML, CSS and JavaScript. Built in Lecture 10 and part of my portfolio: https://github.com/Naman-Chandak
 
-**Live app:** ADD_YOUR_VERCEL_LINK_HERE
+**Live app:** https://interactive-quiz-app-amber.vercel.app
 
 ## Features
 
